@@ -119,7 +119,7 @@ traefik_port_ui: "8083"
 ### General
 ###
 # Sets the hostname of your Ansible NAS
-ansible_nas_hostname: ansible-nas
+ansible_nas_hostname: hok-ansible-nas
 
 # Sets the timezone for your Ansible NAS
 # You can find a list here https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -129,13 +129,13 @@ ansible_nas_timezone: Etc/UTC
 keep_packages_updated: false
 
 # Will be added to the docker group to give user command line access to docker
-ansible_nas_user: david
+ansible_nas_user: hok
 
 # Your email and domain, used for Let's Encrypt SSL certs
-ansible_nas_email: me@example.com
+ansible_nas_email: me@kiwikiwi.fun
 
 # Applications will have subdomain SSL certificates created if Traefik is enabled, e.g. ansible-nas.<your-domain>, nextcloud.<your-domain>
-ansible_nas_domain: example.com
+ansible_nas_domain: home.kiwikiwi.fun
 
 ###
 ### Docker
