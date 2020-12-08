@@ -14,9 +14,14 @@ ansible_nas_timezone: Etc/UTC
 
 ## Enable some applications
 heimdall_enabled: true
+heimdall_available_externally: "true"
 portainer_enabled: true
+
 glances_enabled: true
+
 traefik_enabled: true
+traefik_port_http: "80"
+traefik_port_https: "443"
 
 gitlab_enabled: true
 gitlab_available_externally: "true"
