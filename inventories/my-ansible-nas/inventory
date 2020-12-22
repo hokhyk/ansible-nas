@@ -16,4 +16,4 @@ ansible-nas ansible_host=10.1.1.155
 # ansible-nas ansible_connection=local ansible_host=localhost
 
 [nas]
-ansible-nas
+hok-nas-server
