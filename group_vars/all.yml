@@ -100,6 +100,9 @@ ubooquity_enabled: false
 # Joomla
 joomla_enabled: false
 
+# Wordpress
+wordpress_enabled: false
+
 # PyTivo
 pytivo_enabled: false
 
@@ -405,6 +408,15 @@ joomla_data_directory: "{{ docker_home }}/joomla"
 joomla_available_externally: "false"
 joomla_database_password: top_secret
 joomla_port: "8181"
+
+###
+### Wordpress
+###
+wordpress_data_directory: "{{ docker_home }}/wordpress"
+wordpress_available_externally: "false"
+wordpress_database_password: top_secret
+wordpress_db_name: hokblog
+wordpress_port: "8182"
 
 ###
 ### pyLoad

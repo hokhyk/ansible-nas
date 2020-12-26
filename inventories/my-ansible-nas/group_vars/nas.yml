@@ -28,4 +28,9 @@ gitlab_available_externally: "true"
 
 ansible_nas_domain: home.kiwikiwi.fun
 
+joomla_enabled: true
+
+# Wordpress
+wordpress_enabled: true
+
 # ansible-playbook -i inventories/my-ansible-nas/inventory nas.yml -b -K
