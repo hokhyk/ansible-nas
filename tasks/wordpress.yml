@@ -1,0 +1,46 @@
+---
+- name: Create Wordpress Directories
+  file:
+    path: "{{ item }}"
+    state: directory
+  with_items:
+    - "{{ wordpress_data_directory }}"
+    - "{{ wordpress_data_directory }}/db"
+
+- name: MySQL Docker Container for wordpress
+  docker_container:
+    name: wordpress_mysql
+    image: mysql:5.7
+    pull: true
+    volumes:
+      - "{{ wordpress_data_directory }}/db:/var/lib/mysql"
+    env:
+      MYSQL_DATABASE: "hokblog"
+      MYSQL_USER: "hokblog"
+      MYSQL_ROOT_PASSWORD: "{{ wordpress_database_password }}"
+    restart_policy: unless-stopped
+    memory: 1g
+
+- name: Wordpress Docker Container
+  docker_container:
+    name: wordpress
+    image: wordpress
+    pull: true
+    volumes:
+      - "{{ wordpress_data_directory }}:/var/www/html:rw"
+    ports:
+      - "{{ wordpress_port }}:80"
+    links:
+      - "wordpress_mysql:mysql"
+    env:
+      WORDPRESS_DB_HOST: "mysql"
+      WORDPRESS_DB_USER: "root"
+      WORDPRESS_DB_PASSWORD: "{{ wordpress_database_password }}"
+      WORDPRESS_DB_NAME: "{{ wordpress_db_name }}"
+    restart_policy: unless-stopped
+    memory: 1g
+    labels:
+      traefik.backend: "wordpress"
+      traefik.frontend.rule: "Host: blog.{{ ansible_nas_domain }}"
+      traefik.enable: "{{ wordpress_available_externally }}"
+      traefik.port: "80"
