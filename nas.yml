@@ -172,6 +172,10 @@
     when: (joomla_enabled | default(False))
     tags: joomla
 
+  - import_tasks: tasks/wordpress.yml
+    when: (wordpress_enabled | default(False))
+    tags: wordpress
+
   - import_tasks: tasks/bitwarden.yml
     when: (bitwarden_enabled | default(False))
     tags: bitwarden
