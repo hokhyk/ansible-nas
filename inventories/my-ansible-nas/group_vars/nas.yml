@@ -13,11 +13,11 @@ ansible_nas_hostname: hok-nas-server
 ansible_nas_timezone: Etc/UTC
 
 ## Enable some applications
-heimdall_enabled: true
-heimdall_available_externally: "true"
+# heimdall_enabled: true
+# heimdall_available_externally: "true"
 # portainer_enabled: true
 
-glances_enabled: true
+# glances_enabled: true
 
 # traefik_enabled: true
 # traefik_port_http: "80"
@@ -28,7 +28,7 @@ glances_enabled: true
 
 ansible_nas_domain: home.kiwikiwi.fun
 
-joomla_enabled: true
+# joomla_enabled: true
 
 # Wordpress
 wordpress_enabled: true
