@@ -36,7 +36,7 @@
       WORDPRESS_DB_HOST: "mysql"
       WORDPRESS_DB_USER: "root"
       WORDPRESS_DB_PASSWORD: "{{ wordpress_database_password }}"
-      WORDPRESS_DB_NAME: "{{ wordpress_db_name }}"
+      # WORDPRESS_DB_NAME: "{{ wordpress_db_name }}"
     restart_policy: unless-stopped
     memory: 1g
     labels:
