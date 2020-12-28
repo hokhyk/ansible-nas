@@ -33,4 +33,6 @@ joomla_enabled: true
 # Wordpress
 wordpress_enabled: true
 
+couchpotato_enabled: true
+
 # ansible-playbook -i inventories/my-ansible-nas/inventory nas.yml -b -K
