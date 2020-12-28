@@ -35,5 +35,11 @@ ansible_nas_domain: home.kiwikiwi.fun
 
 couchpotato_enabled: true
 emby_enabled: true
+jellyfin_enabled: true
+guacamole_enabled: true
+nextcloud_enabled: true
+ombi_enabled: true
+radarr_enabled: true
+ubooquity_enabled: true
 
 # ansible-playbook -i inventories/my-ansible-nas/inventory nas.yml -b -K
