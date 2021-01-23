@@ -135,7 +135,7 @@ keep_packages_updated: false
 ansible_nas_user: hok
 
 # Your email and domain, used for Let's Encrypt SSL certs
-ansible_nas_email: me@kiwikiwi.fun
+ansible_nas_email: hokhyk@aliyun.com
 
 # Applications will have subdomain SSL certificates created if Traefik is enabled, e.g. ansible-nas.<your-domain>, nextcloud.<your-domain>
 ansible_nas_domain: home.kiwikiwi.fun
@@ -417,6 +417,15 @@ wordpress_available_externally: "false"
 wordpress_database_password: top_secret
 wordpress_db_name: hokblog
 wordpress_port: "8182"
+
+###
+### lnmp
+###
+lnmp_data_directory: "{{ docker_home }}/lnmp"
+lnmp_available_externally: "false"
+lnmp_database_password: top_secret
+lnmp_db_name: hokblog
+lnmp_port: "8182"
 
 ###
 ### pyLoad
